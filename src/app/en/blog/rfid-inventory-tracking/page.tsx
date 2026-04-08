@@ -1,10 +1,16 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "How RFID Inventory Tracking Works | Invextory",
-  description:
-    "Learn how RFID inventory tracking works, how it replaces manual systems, and how real-time visibility is achieved in warehouses and enterprises.",
+  description: "Learn how RFID inventory tracking works...",
+
+  alternates: {
+    languages: {
+      tr: "https://www.invextory.com/blog/rfid-envanter-takibi",
+      en: "https://www.invextory.com/en/blog/rfid-inventory-tracking",
+    },
+  },
 };
 
 export default function Page() {

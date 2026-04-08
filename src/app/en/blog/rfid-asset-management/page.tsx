@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "What is RFID Asset Management? | Invextory",
   description:
     "Learn how RFID asset management works, how it replaces manual tracking systems, and how real-time inventory tracking is achieved.",
+
+      alternates: {
+      languages: {
+      tr: "https://www.invextory.com/blog/rfid-demirbas-yonetimi",
+      en: "https://www.invextory.com/en/blog/rfid-asset-management",
+    },
+  },
 };
 
 export default function Page() {

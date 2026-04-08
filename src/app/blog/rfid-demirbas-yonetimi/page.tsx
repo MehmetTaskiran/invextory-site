@@ -5,6 +5,13 @@ export const metadata: Metadata = {
   title: "RFID Demirbaş Yönetimi Nedir? | Invextory",
   description:
     "RFID teknolojisi ile demirbaş yönetimi nasıl yapılır? Manuel sistemlerin neden yetersiz kaldığını ve RFID ile otomatik takibin nasıl çalıştığını öğrenin.",
+
+    alternates: {
+    languages: {
+      tr: "https://www.invextory.com/blog/rfid-demirbas-yonetimi",
+      en: "https://www.invextory.com/en/blog/rfid-asset-management",
+    },
+  },
 };
 
 export default function Page() {

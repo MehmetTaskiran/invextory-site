@@ -1,10 +1,16 @@
 import { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "RFID ile Envanter Takibi Nasıl Yapılır? | Invextory",
-  description:
-    "RFID teknolojisi ile envanter takibi nasıl yapılır? Gerçek zamanlı stok takibi, otomatik veri toplama ve operasyonel verimlilik hakkında detaylı rehber.",
+  description: "RFID teknolojisi ile envanter takibi nasıl yapılır...",
+
+  alternates: {
+    languages: {
+      tr: "https://www.invextory.com/blog/rfid-envanter-takibi",
+      en: "https://www.invextory.com/en/blog/rfid-inventory-tracking",
+    },
+  },
 };
 
 export default function Page() {
