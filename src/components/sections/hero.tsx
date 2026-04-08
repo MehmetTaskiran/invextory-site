@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { LogoAnimation } from "@/components/sections/IntroAnimation";
+import LeadForm from "@/components/LeadForm";
 
 /* ---------------- HERO ---------------- */
 
@@ -276,3 +277,7 @@ function HeroVisual({ mode }: { mode: string }) {
     </div>
   );
 }
+
+<div className="mt-16 max-w-md">
+  <LeadForm />
+</div>
