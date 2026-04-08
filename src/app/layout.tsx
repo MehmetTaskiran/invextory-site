@@ -18,3 +18,15 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const metadata = {
+  title: "RFID Demirbaş Yönetim Sistemi | Invextory",
+  description:
+    "RFID teknolojisi ile demirbaş takibini otomatik hale getirin. El terminalleri, RFID etiketler ve yazılım tek sistemde.",
+  keywords: [
+    "rfid demirbaş yönetimi",
+    "rfid envanter sistemi",
+    "asset tracking rfid",
+    "rfid el terminali",
+  ],
+};
