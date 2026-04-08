@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "@/components/layout/footer";
 
 export default function RootLayout({
   children,
@@ -13,7 +14,9 @@ export default function RootLayout({
         <div className="fixed inset-0 -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,#22d3ee20,transparent_70%)]" />
 
         {children}
-
+        
+        <Footer />
+        
       </body>
     </html>
   );
