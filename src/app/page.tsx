@@ -1,3 +1,5 @@
-import Page from "./(marketing)/page";
+import MarketingPage from "./(marketing)/page";
 
-export default Page;
+export default function Page() {
+  return <MarketingPage />;
+}
