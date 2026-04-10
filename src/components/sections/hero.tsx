@@ -7,45 +7,72 @@ import { Button } from "@/components/ui/button";
 import { LogoAnimation } from "@/components/sections/IntroAnimation";
 import LeadForm from "@/components/LeadForm";
 
+
 /* ---------------- HERO ---------------- */
 
 export function HeroSection() {
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <Section className="relative overflow-hidden min-h-screen flex items-center">
 
-      <Navbar />
+        <Navbar />
 
-      <Container>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <div className="max-w-xl">
+            <div className="max-w-xl">
 
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-              RFID Teknolojisiyle <span className="text-cyan-400">Hızlı ve doğru Yönetim</span>
-            </h1>
+              <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+                RFID Teknolojisiyle <span className="text-cyan-400">Hızlı ve doğru Yönetim</span>
+              </h1>
 
-            <p className="mt-6 text-red-400">
-              Varlıklarınızı yönetmenin en teknolojik yolu
-            </p>
+              <p className="mt-6 text-red-400">
+                Varlıklarınızı yönetmenin en teknolojik yolu
+              </p>
 
-            <p className="mt-3 text-white-500 text-sm">
-              Siz veri girmazsiniz sistem kendisi okur
-            </p>
+              <p className="mt-3 text-white-500 text-sm">
+                Siz veri girmezsiniz sistem kendisi okur
+              </p>
 
-            <div className="mt-10 flex gap-4">
-              <Button variant="primary">Demo Talep Et</Button>
+              <div className="mt-10 flex gap-4">
+                <Button 
+                  variant="primary" 
+                  onClick={() => setIsModalOpen(true)}
+                >
+                  Demo Talep Et
+                </Button>              
+              </div>
+
             </div>
 
+            <HeroVisual mode={"default"} />
+
           </div>
+        </Container>
+        {isModalOpen && (
+                <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
+                  <div className="bg-[#0B1220] p-8 rounded-2xl w-full max-w-md border border-white/10 relative shadow-2xl">
+                    <button 
+                      onClick={() => setIsModalOpen(false)}
+                      className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors text-2xl"
+                    >
+                      ×
+                    </button>
+                    <div className="mb-6 text-center">
+                      <h2 className="text-2xl font-bold text-white">Demo Talebi</h2>
+                      <p className="text-sm text-neutral-400 mt-2">Formu doldurun, size ulaşalım.</p>
+                    </div>
+                    <LeadForm />
+                  </div>
+                </div>
+              )}
+  
+        </Section>
+      );
+    }
 
-          <HeroVisual mode={"default"} />
+  
 
-        </div>
-      </Container>
-    </Section>
-  );
-}
 
 /* ---------------- NAVBAR ---------------- */
 
@@ -153,8 +180,6 @@ function NavItem({ text }: any) {
     </div>
   );
 }
-
-
 
 /* ---------------- VISUAL ---------------- */
 
